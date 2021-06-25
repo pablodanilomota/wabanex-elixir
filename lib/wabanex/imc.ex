@@ -8,9 +8,9 @@ defmodule Wabanex.IMC do
   defp handle_file({:ok, content}) do
     data =
       content
-    |> String.split("\n")
-    |> Enum.map(fn line -> parse_line(line) end)
-    |> Enum.into(%{})
+      |> String.split("\n")
+      |> Enum.map(fn line -> parse_line(line) end)
+      |> Enum.into(%{})
 
     {:ok, data}
   end

@@ -14,7 +14,6 @@ defmodule WabanexWeb.IMCController do
 
   defp handle_response({:error, result}, conn), do: render_response(conn, result, :bad_request)
 
-
   defp render_response(conn, result, status) do
     conn
     |> put_status(status)
